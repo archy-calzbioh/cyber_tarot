@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <style>
+      table {
+        width: 400px;
+      }
+
+      img {
+        width: 400px; /* or any fixed value or percentage */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hover">
+        <table>
+          <tr>
+            <% if (data) { %>
+            <td><h2><%= data.name %></h2></td>
+            <% } %>
+          </tr>
+          <tr>
+            <td>
+              <% if (data) { %>
+              <img src="<%= data.img%>" />
+              <% } %>
+            </td>
+          </tr>
+          <tr>
+            <% if (data) { %>
+            <td>Suit: <%= data.suit %></td>
+            <% } %>
+          </tr>
+          <tr>
+            <% if (data) { %>
+            <td>Number: <%= data.number %></td>
+            <% } %>
+          </tr>
+          <tr>
+            <% if (data) { %>
+            <td>Upright: <%= data.upright %></td>
+            <% } %>
+          </tr>
+          <tr>
+            <% if (data) { %>
+            <td>Reverse: <%= data.reversed%></td>
+            <% } %>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <button onclick="window.location.href='/'">Back</button>
+     
+    </div>
+  </body>
+</html>

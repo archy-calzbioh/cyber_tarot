@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+<html>
+  <body>
+<table>
+  <tr>
+    <% cards.forEach((cards, index) => { %>
+      <% if (index > 0 && index % 4 == 0) { %>
+        </tr>
+          <tr>
+      <% } %>
+      <td class="image-cell hover">
+        <h4><%= cards.name %></h4>
+        <a href="<%= cards.id %>"><img src="<%= cards.img %>"></a>
+      </td>
+    <% }) %>
+  </tr>
+</table>
+    <!-- <button onclick="window.location.href
+            = 'new';">Make a new thingflam</button> -->
+            
+        </body>
+
+        
+  </body>
+</html>
